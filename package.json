@@ -1,0 +1,68 @@
+{
+    "name": "birendra",
+    "version": "1.0.0",
+    "description": "Shree Birendra Sarvajanik Higher Secondary School",
+    "author": "Saroj K. Poddar",
+    "license": "MIT",
+    "keywords": [
+      "WordPress",
+      "Theme"
+    ],
+    "homepage": "",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/saroz/birendra-shss"
+    },
+    "bugs": {
+      "url": "https://github.com/saroz/birendra-shss/issues"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.17.8",
+      "@babel/preset-env": "^7.16.11",
+      "@wordpress/scripts": "^19.2.2",
+      "browser-sync": "^2.27.10",
+      "dir-archiver": "^1.1.1",
+      "gulp": "^4.0.2",
+      "gulp-archiver": "^1.0.0",
+      "gulp-autoprefixer": "^8.0.0",
+      "gulp-babel": "^8.0.0",
+      "gulp-clean": "^0.4.0",
+      "gulp-clean-css": "^4.3.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-header": "^2.0.9",
+      "gulp-plumber": "^1.2.1",
+      "gulp-rename": "^2.0.0",
+      "gulp-sass": "^5.0.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "gulp-stylelint": "^13.0.0",
+      "gulp-uglify": "^3.0.2",
+      "node-sass": "^7.0.1",
+      "rtlcss": "^3.5.0",
+      "sass": "^1.35.1",
+      "sassdoc": "^2.7.3",
+      "stylelint": "^14.6.0",
+      "stylelint-config-standard": "^22.0.0",
+      "stylelint-config-standard-scss": "^3.0.0",
+      "stylelint-scss": "^3.19.0"
+    },
+    "rtlcssConfig": {
+      "options": {
+        "autoRename": false,
+        "autoRenameStrict": false,
+        "blacklist": {},
+        "clean": true,
+        "greedy": false,
+        "processUrls": false,
+        "stringMap": []
+      },
+      "plugins": [],
+      "map": false
+    },
+    "scripts": {
+      "start": "gulp",
+      "build": "gulp compile:css && gulp compile:js"
+    }
+  }
+  
+  
+  

@@ -1,0 +1,29 @@
+.site {
+    &-navbar {
+        &--list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            .nav {
+                &-item {
+
+                }
+
+                &-link {
+                    text-decoration: none;
+                    padding: 0.625rem 1.25rem;
+                    text-transform: uppercase;
+                    color: #666;
+                    font-weight: 500;
+                    font-size: 0.75rem;
+                    letter-spacing: 1px;
+
+                    &.active {
+                        color: #4801FF;
+                    }
+                }
+            }
+        }
+    }
+}

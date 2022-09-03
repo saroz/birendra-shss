@@ -1,0 +1,33 @@
+.site {
+    &-header {
+        &--top {
+            // background-image: linear-gradient(140deg, #0fd850 0%, #f9f047 100%);
+            // background-image: linear-gradient(60deg, #3d3393 0, #0fd850 100%);
+            // background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+            background-color: #461ac0;
+            padding: 0.5rem 0;
+        }
+
+        &--main {
+            position: sticky;
+            top: 0;
+            padding: 1.25rem 0;
+        }
+    }
+
+    &-name {
+        margin-right: auto;
+    }
+
+    &-contact {
+        column-gap: 1.25rem;
+        color: $white;
+        font-size: 0.75rem;
+        font-weight: 300;
+
+        a {
+            color: $white;
+        }
+    }
+
+}

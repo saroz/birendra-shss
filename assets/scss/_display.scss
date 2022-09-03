@@ -1,0 +1,121 @@
+%flex {
+    display: flex;
+}
+
+%row {
+    flex-direction: row;
+}
+
+%wrap {
+    flex-wrap: wrap;
+}
+
+%column {
+    flex-direction: column;
+}
+
+%align-start {
+    align-items: flex-start;
+}
+
+%align-center {
+    align-items: center;
+}
+
+%align-end {
+    align-items: flex-end;
+}
+
+%justify-start {
+    justify-content: flex-start
+}
+
+%justify-center {
+    justify-content: center;
+}
+
+%justify-end {
+    justify-content: flex-end;
+}
+
+%justify-around {
+    justify-content: space-around;
+}
+
+%justify-between {
+    justify-content: space-between;
+}
+
+.flex {
+    @extend %flex;
+
+    &-row {
+        &,
+        &-wrap {
+            @extend %flex;
+            @extend %row;
+        }
+
+        &-wrap {
+            @extend %wrap;
+        }
+    }
+
+    &-column {
+        @extend %flex;
+        @extend %column;
+    }
+
+    &-align-start {
+        @extend %align-start;
+    }
+
+    &-align-center {
+        @extend %align-center;
+    }
+
+    &-align-end {
+        @extend %align-end;
+    }
+    
+    &-justify-start {
+        @extend %justify-start;
+    }
+
+    &-justify-center {
+        @extend %justify-center;
+    }
+
+    &-justify-end {
+        @extend %justify-end;
+    }
+
+    &-justify-end {
+        @extend %justify-end;
+    }
+
+    &-justify-around {
+        @extend %justify-around;
+    }
+    
+    &-justify-between {
+        @extend %justify-between;
+    }
+}
+
+
+
+// TEXT ALIGNMENT
+.text {
+    &-left {
+        text-align: left;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}
