@@ -73,5 +73,21 @@
             font-size: 1rem;
         }
     }
+    @media only screen and (max-width: 767.99px) {
+        &:nth-child(even) {
+            transform: translateX(0);
+        }
 
+        &s {
+            padding: 0;
+
+            &-home {
+                padding: 3.125rem 0;
+
+                .row {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
 }
