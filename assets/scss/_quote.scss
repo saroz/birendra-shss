@@ -1,0 +1,41 @@
+.quote {
+    &-section {
+        background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+        padding: 7rem 0;
+    }
+
+    &-figure {
+        width: 400px;
+        height: 400px;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-quote {
+        margin: 1.875rem 0;
+        flex-direction: column-reverse;
+        border-left: 0.25rem solid $info;
+        background-color: #D7FFFE;
+        padding: 1.25rem 1.875rem;
+
+        p {
+            font-size: 1.25rem;
+            margin: 0 0 0.25rem;
+        }
+
+        cite {
+            font-style: normal;
+            color: $info;
+        }
+    }
+
+    &-message {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+}

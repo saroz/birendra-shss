@@ -96,7 +96,8 @@ const watching = () => {
   return (
     watch(path.watch, series(sass, serverReload)),
     watch(path.watch, series(css, serverReload)),
-    watch(ASSETS + "images/**/*.*", series(copyImages, serverReload))
+    watch(ASSETS + "images/**/*.*", series(copyImages, serverReload)),
+    watch("./*.html*", serverReload)
   )
 }
 

@@ -1,6 +1,11 @@
 html {
-    font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
     line-height: 1.5;
     color: #444;
 }
@@ -15,15 +20,78 @@ p {
 }
 
 .section {
-    &-header {
-        padding-top: 4rem;
-    }
     &-heading {
-        font-size: 2.5rem;
-        font-weight: 500;
+        font-size: 3.125rem;
+        font-weight: 700;
+        // text-transform: lowercase;
+        margin: 0 0 1.875rem;
+        line-height: 1.2;
+        position: relative;
+        color: rgba($black, 1);
 
         span {
-            color: $purple;
+            &::after {
+                content: "";
+                display: block;
+                width: 3.75rem;
+                height: 0.1875rem;
+                background-color: $success;
+                margin-top: 1rem;
+                position: absolute;
+                left: 0;
+                top: 100%;
+            }
+
+            &.text {
+                &-success::after{
+                    background-color: $success;
+                }
+
+                &-warning::after{
+                    background-color: $warning;
+                }
+                
+                &-info::after{
+                    background-color: $info;
+                }
+
+                &-danger::after{
+                    background-color: $danger;
+                }
+
+                &-white::after{
+                    background-color: $white;
+                }
+            }
+        }
+
+        &.text {
+            &-center {
+                span{
+                    &::after {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            
+            &-right {
+                span{
+                    &::after {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &--sub {
+            display: block;
+            padding: 0.625rem 0 1.5rem;
+            font-size: 0.875rem;
+            line-height: 1.8;
+            font-weight: 600;
+            color: rgba($black, 0.4);
         }
     }
 }

@@ -1,0 +1,77 @@
+.event {
+    background-color: $white;
+    padding: 2.25rem;
+    box-shadow: 0 0 0.5rem 0 #c9e2f8;
+    border-radius: 1.875rem;
+
+    &:nth-child(even) {
+        transform: translateX(-5rem);
+    }
+
+    &s {
+        padding: 0 5rem;
+        gap: 1.875rem;
+
+        &-home {
+            padding: 7rem 0;
+        }
+    }
+
+
+
+    &-meta {
+        @extend %flex;
+        align-items: center;
+
+        .icon {
+            margin-right: 0.5rem;
+            background-size: 90% auto;
+
+            &-date {
+                background-image: url(../images/calendar.svg);
+            }
+
+            &-time {
+                background-image: url(../images/time.svg);
+            }
+        }
+    }
+
+
+    &-label {
+        color: $purple;
+        font-weight: 600;
+        font-size: 0.875rem;
+        font-style: normal;
+    }
+
+    &-title {
+        margin: 0.9375rem 0 0.125rem;
+        font-size: 1.625rem;
+        font-weight: 700;
+
+
+    }
+
+    &-cost {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgba($success, 1);
+    }
+
+    &-location {
+        align-items: center;
+
+        .icon-location {
+            background-image: url(../images/location.svg);
+            margin-right: 0.5rem;
+        }
+
+        cite {
+            font-style: normal;
+            font-size: 1rem;
+        }
+    }
+
+}

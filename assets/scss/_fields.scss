@@ -1,0 +1,34 @@
+.field {
+    &-text {
+        background-color: $white;
+        border: 2px solid $white;
+        height: 3.125rem;
+        display: block;
+        width: 100%;
+        padding: 1.25rem;
+        box-sizing: border-box;
+        border-radius: 0.75rem;
+        color: $info;
+        transition: 400ms;
+
+        &.outline {
+            border: 2px solid rgba($black, 0.5);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $info;
+        }
+
+    }
+
+    &-textarea {
+        height: 5rem;
+        resize: none;
+    }
+
+    &-item {
+        margin-bottom: 1.25rem;
+    }
+}

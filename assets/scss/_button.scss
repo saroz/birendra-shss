@@ -7,17 +7,28 @@ $btn-large: 3.125rem;
     color: $white;
     line-height: normal;
     padding: 0 2rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     letter-spacing: 0.125rem;
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
+    transition: 400ms;
 
     &-cta {
         background: #cc2b5e;
-        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
         background-image: linear-gradient(120deg, #0fd850 0%, #f9f047 100%);
+    }
 
+    &-outline {
+        &--light {
+            border: 2px solid $white;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $white;
+                color: #ed5450;
+            }
+        }
     }
 
     &[role="button"] {
