@@ -22,6 +22,7 @@
             flex: 0 0 2.5rem;
             height: 2.5rem;
             order: 3;
+            display: none;
 
             &:hover {
                 background-color: $success;
@@ -31,7 +32,7 @@
         .desktop-hidden {
             position: fixed;
             opacity: 0;
-            display: none;
+            
             margin-left: 2rem;
         }
 
@@ -107,11 +108,13 @@
                 }
             }
 
-            .desktop-hidden {
+            .icon-hamburger {
                 display: block;
                 position: relative;
                 z-index: 10;
+            }
 
+            .desktop-hidden {
                 &:checked ~ .site-navbar {
                     display: block;
                     transform: translateX(0);
