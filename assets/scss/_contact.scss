@@ -1,0 +1,52 @@
+.contact {
+    &-inquery {
+        background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+        background-image: linear-gradient(-200deg, #f9d423 0%, #ff4e50 100%);
+        padding: 8rem 0;
+    }
+}
+
+.site {
+    &-contact {
+        &--contact {
+            padding: 7rem 0;
+        }
+
+        &--info {
+            &s {
+                background-color: $white;
+                box-shadow: 0 0 0.5rem 0 #c9e2f8;
+                padding: 1.875rem;
+                border-radius: 1.875rem;
+            }
+
+            font-size: 1.5rem;
+            align-items: flex-start;
+            margin-bottom: 1.875rem;
+            color: $black;
+
+            &[href] {
+                color: $info;
+
+                small {
+                    display: inline-block;
+                    border-bottom: 1px solid;
+                }
+
+                &:hover {
+                    small {
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+
+            img {
+                margin-right: 0.75rem;
+                display: block;
+                width: 1rem;
+                margin-top: 0.375rem;
+            }
+        }
+    }
+
+}

@@ -1,3 +1,7 @@
+@use "sass:math";
+
+$columns: 12;
+
 %flex {
     display: flex;
 }
@@ -90,10 +94,6 @@
         @extend %justify-end;
     }
 
-    &-justify-end {
-        @extend %justify-end;
-    }
-
     &-justify-around {
         @extend %justify-around;
     }
@@ -117,5 +117,76 @@
 
     &-right {
         text-align: right;
+    }
+
+    &-success {
+        color: $success;
+    }
+
+    &-warning {
+        color: $warning;
+    }
+
+    &-info {
+        color: $info;
+    }
+
+    &-white {
+        color: $white;
+    }
+
+    &-danger {
+        color: $danger;
+    }
+
+    &-copyright {
+        // color: $white;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    &-capitalized {
+        text-transform: capitalize;
+    }
+
+    &-solo {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.8;
+        margin-bottom: 3.125rem;
+
+        strong {
+            font-weight: 700;
+            color: $info;
+        }
+    }
+}
+
+.bg-faded {
+    background-color: #f5fcff;
+    padding: 7rem 0;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: math.percentage(math.div($i, $columns));
+        padding-right: 15px;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mt-#{$i} {
+        margin-top: #{$i}rem;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: #{$i}rem;
     }
 }

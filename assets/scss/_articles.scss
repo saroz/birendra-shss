@@ -1,13 +1,19 @@
 .article {
     &s-home {
         position: relative;
-        padding: 5rem 0;
+        padding: 10rem 0;
+        overflow: hidden;
+
+        .section-header {
+            padding-top: 3.125rem;
+        }
 
         svg {
             height: 14rem;
             width: 150vw;
             position: absolute;
             left: 50%;
+            top: 5rem;
             z-index: -1;
             transform: translateX(-50%);
 
@@ -37,14 +43,15 @@
     }
 
     &-blog {
-        max-width: 25%;
+        // max-width: 25%;
         box-sizing: border-box;
-        padding: 0 0.9375rem;
+        // padding: 0 0.9375rem;
 
         &--item {
             background-color: $white;
             box-shadow: 0 0 0.5rem 0 #c9e2f899;
             border-radius: 1.875rem;
+            height: 100%;
 
             p {
                 font-size: 0.75rem;
@@ -78,9 +85,100 @@
         }
 
         &--title {
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.25rem;
             color: $purple;
+        }
+    }
+
+    &-solo {
+        padding: 5rem 0 10rem;
+    }
+
+    &-ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            font-size: 1.125rem;
+            color: #666;
+            line-height: 1.8;
+            display: flex;
+            padding-bottom: 1.5rem;
+
+            &::before {
+                content: '';
+                display: block;
+                flex: 0 0 0.5rem;
+                height: 0.5rem;
+                background-color: $info;
+                margin-right: 0.625rem;
+                margin-top: 0.75rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+.progress {
+    &-skills {
+        display: block;
+        height: 3.125rem;
+        background-color: #eee;
+        border-radius: 1.5rem;
+        margin-bottom: 0.875rem;
+        max-width: 20rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        span {
+            display: block;
+            padding: 0 2.5rem;
+            position: absolute;
+            z-index: 9;
+            color: $white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            z-index: 1;
+            border-radius: 1.5rem 0 0 1.5rem;
+        }
+        
+        &--80 {
+            &::after {
+                width: 80%;
+                background-color: $info;
+            }
+        }
+
+        &--90 {
+            &::after {
+                width: 90%;
+                background-color: $success;
+            }
+        }
+        &--75 {
+            &::after {
+                width: 75%;
+                background-color: $warning;
+            }
+        }
+        &--70 {
+            &::after {
+                width: 70%;
+                background-color: $danger;
+            }
         }
     }
 }

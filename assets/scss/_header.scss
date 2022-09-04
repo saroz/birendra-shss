@@ -8,10 +8,31 @@
             padding: 0.5rem 0;
         }
 
+        .cta {
+            margin-left: 2.5rem;
+        }
+
         &--main {
             position: sticky;
             top: 0;
             padding: 1.25rem 0;
+        }
+
+        .icon {
+            margin-right: 0.5rem;
+            opacity: 0.5;
+
+            &-marker {
+                background-image: url(../images/marker.svg);
+            }
+
+            &-phone {
+                background-image: url(../images/phone.svg);
+            }
+
+            &-email {
+                background-image: url(../images/email.svg);
+            }
         }
     }
 
@@ -22,8 +43,11 @@
     &-contact {
         column-gap: 1.25rem;
         color: $white;
-        font-size: 0.75rem;
-        font-weight: 300;
+        font-size: 1rem;
+
+        &--detail {
+            align-items: center;
+        }
 
         a {
             color: $white;
