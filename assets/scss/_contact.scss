@@ -3,6 +3,10 @@
         background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
         background-image: linear-gradient(-200deg, #f9d423 0%, #ff4e50 100%);
         padding: 8rem 0;
+
+        @media only screen and (max-width: 767.99px) {
+            padding: 3.125rem 0;
+        }
     }
 }
 
@@ -45,6 +49,16 @@
                 display: block;
                 width: 1rem;
                 margin-top: 0.375rem;
+            }
+        }
+
+        @media only screen and (max-width: 767.99px) {
+            &--contact {
+                padding: 3.125rem 0;
+            }
+
+            &--infos {
+                margin-bottom: 2.5rem;
             }
         }
     }
