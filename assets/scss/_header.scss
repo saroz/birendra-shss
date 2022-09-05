@@ -3,9 +3,6 @@
         position: relative;
         z-index: 1090;
         &--top {
-            // background-image: linear-gradient(140deg, #0fd850 0%, #f9f047 100%);
-            // background-image: linear-gradient(60deg, #3d3393 0, #0fd850 100%);
-            // background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
             background-color: #461ac0;
             padding: 0.5rem 0;
         }
@@ -18,7 +15,7 @@
             border-radius: 1rem;
             cursor: pointer;
             display: block;
-            margin-left: 1.25rem;
+            margin: 0;
             flex: 0 0 2.5rem;
             height: 2.5rem;
             order: 3;
@@ -72,6 +69,11 @@
         column-gap: 1.25rem;
         color: $white;
         font-size: 1rem;
+        
+        small {
+            line-height: 1;
+            word-break: break-all;
+        }
 
         &--detail {
             align-items: center;
@@ -107,10 +109,16 @@
                     }
                 }
             }
+            
+            .btn-cta {
+                padding: 0 1.25rem;
+                font-size: 0.75rem;
+            }
 
             .icon-hamburger {
                 display: block;
                 position: relative;
+                margin: 0;
                 z-index: 10;
             }
 
@@ -124,6 +132,12 @@
 
         &-name img {
             width: 10rem;
+        }
+
+        &-contact {
+            small {
+                font-size: 0.625rem;
+            }
         }
     }
 

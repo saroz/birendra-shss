@@ -43,5 +43,9 @@ $danger: #ff0844;
             object-fit: cover;
             border-radius: 50%;
         }
+
+        @media only screen and (max-width: 767.99px) {
+            width: 100%;
+        }
     }
 }

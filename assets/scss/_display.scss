@@ -195,3 +195,9 @@ $columns: 12;
         margin-bottom: #{$i}rem;
     }
 }
+
+@media only screen and (max-width: 767.99px) {
+    .bg-faded {
+        padding: 3.125rem 0;
+    }
+}
