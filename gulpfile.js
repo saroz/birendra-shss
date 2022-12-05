@@ -36,9 +36,10 @@ const path = {
     ASSETS + "scss/styles.scss"
   ],
   libs: [
+    ASSETS + "libs/highlight.min.js",
     NODE_MODULES + "",
   ],
-  scripts: ASSETS + "",
+  scripts: ASSETS + "js/common.js",
   watch: [
       ASSETS + "scss/**/*.scss",
   ]
@@ -48,6 +49,39 @@ const copyImages = () => {
   return (
     src(`${ASSETS}images/*.*`)
     .pipe(dest(`${DIST}images/`))
+  )
+}
+
+// Compile JavaScript Files
+const libs = () => {
+  return (
+    src(path.libs)
+    .pipe(plumber())
+    .pipe(concat("libs.js"))
+    .pipe(dest(`${DIST}js/`))
+  )
+}
+
+ // Compile JavaScript Files
+ const scripts = () => {
+  return (
+    src(path.scripts)
+    .pipe(plumber())
+    .pipe(concat("common.js"))
+    .pipe(
+      babel({
+        presets: [
+          [
+            "@babel/env",
+            {
+              modules: false,
+            },
+          ],
+        ],
+      })
+    )
+    // .pipe(uglify())
+    .pipe(dest(`${DIST}js/`))
   )
 }
 
@@ -96,6 +130,7 @@ const watching = () => {
   return (
     watch(path.watch, series(sass, serverReload)),
     watch(path.watch, series(css, serverReload)),
+    watch(path.scripts, series(scripts, serverReload)),
     watch(ASSETS + "images/**/*.*", series(copyImages, serverReload)),
     watch("./*.html*", serverReload)
   )
@@ -107,4 +142,4 @@ exports.watch = watching;
 exports.css = css;
 
 // Tasks Default
-exports.default = series(copyImages, sass, css, server)
+exports.default = series(copyImages, sass, css, libs, scripts, server)

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./dist/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/default.min.css">
+    <title>Shree Birendra Sarvajanik Higher Secondary School</title>
+</head>
+
+<body>
+    <div id="root">
+        <header id="siteHeader" class="site-header">
+            <div class="site-header--top">
+                <div class="container">
+                    <div class="site-contact flex-row flex-align-center">
+                        <a href="/" class="site-contact--detail flex-row">
+                            <small>BACK TO HOME PAGE</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="site-main">
+            <div class="container-small">
+                <div class="flex-row row">
+                    <div class="col-6">
+                        <h2>Pseudo-Classes</h2>
+                        <h3 class="code-heading"><strong>anchor</strong><br/>:hover // : focus</h3>
+                        <a class="isHover" href="/">I am link 😊!</a>
+                        <h3 class="code-heading"><strong>div</strong><br/>:hover</h3>
+                        <div class="isHover-box">
+                            <span>🙂</span>
+                        </div>
+                        <h3 class="code-heading"><strong>Empty</strong><br/>elements</h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p></p>
+                            <p></p>
+                            <p><i>Source: lipsum.com</i></p>
+                        </div>
+                        <h3 class="code-heading"><strong>:first-child // :last-child</strong><br/></h3>
+                        <ul class="lists">
+                            <li>First Item</li>
+                            <li>Second Item</li>
+                            <li>Third Item</li>
+                            <li>Fourth Item</li>
+                        </ul>
+                        <h3 class="code-heading"><strong>input</strong><br/>:focus // :checked // :enabled // :disabled // :required</h3>
+                        <form action="#" method="post">
+                            <div>
+                                <input type="text" placeholder="Full name">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Your email" required>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Confirm your emial" disabled>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" id="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>    
+                            </div>
+                            <div>
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                        <h2>Pseudo-Elements</h2>
+                        <h3 class="code-heading"><strong>first</strong><br/>line // : letter</h3>
+                        <div class="post">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <h3 class="code-heading"><strong>add</strong><br/>::before // ::after</h3>
+    
+                        <ul class="lists lists-counter">
+                            <li>First Item</li>
+                            <li>Second Item</li>
+                            <li>Third Item</li>
+                            <li>Fourth Item</li>
+                            <li>Fourth Item</li>
+                            <li>Fourth Item</li>
+                            <li>Fourth Item</li>
+                            <li>Fourth Item</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="dist/js/libs.js"></script>
+    <script src="dist/js/common.js"></script>
+</body>
+
+</html>

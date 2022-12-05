@@ -5,4 +5,10 @@
     padding-right: 15px;
     width: 100%;
     box-sizing: border-box;
+
+    &-small {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 6.25rem 0;
+    }
 }
